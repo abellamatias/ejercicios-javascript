@@ -11,11 +11,16 @@ Usa una sentencia if para clasificar el IMC como bajo peso (< 18.5), normal (18.
 Muestra el resultado en la consola.
 */
 
-let peso = 68 //kg
-let altura=1.75 //mts
+let peso = 56 //kg
+let altura=1.61 //mts
 
-let calcularIMC=(peso, altura)=>{
-    return peso/(Math.pow(altura,2))
-}
+let imc = peso/(Math.pow(altura,2))
 
-console.log(`El Incice de masa corporal de un peso de ${peso}kg y una altura de ${altura}mts es: ${calcularIMC(peso, altura)}`)
+if(imc<18.5)
+    console.log(`IMC: Bajo (${imc})`)
+else if(imc>=18.5 && imc<25)
+    console.log(`IMC: Normal (${imc})`)
+else if(imc>=25 && imc<30)
+    console.log(`IMC: Sobrepeso (${imc})`)
+else 
+console.log(`IMC: Obesidad (${imc})`)
